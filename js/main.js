@@ -48,11 +48,11 @@ function getLoser() {
     }
     this.checkValid = function (value) {
 
-        if (this.applicants.indexOf(value) < 0 && value != '') {
+        if (!this.applicants.includes(value) && value != '') {
             return true
         }return false; //default value, the ELSE is not neccesary      
     }
-
+    
     this.getRandomUser = function(){
         var $this = this;
         var resultsButton = document.querySelector('#show_results');
